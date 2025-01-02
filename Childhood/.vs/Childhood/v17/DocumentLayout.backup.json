@@ -1,0 +1,118 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\nikon\\Desktop\\\u041D\u0438\u043A\u043E\u043D\u043E\u0440\u043E\u0432\u0430 415\\Childhood\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2FCD0FBB-F477-464C-85EB-201442D85CA1}|Childhood.csproj|c:\\users\\nikon\\desktop\\\u043D\u0438\u043A\u043E\u043D\u043E\u0440\u043E\u0432\u0430 415\\childhood\\view\\authorization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2FCD0FBB-F477-464C-85EB-201442D85CA1}|Childhood.csproj|solutionrelative:view\\authorization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FCD0FBB-F477-464C-85EB-201442D85CA1}|Childhood.csproj|c:\\users\\nikon\\desktop\\\u043D\u0438\u043A\u043E\u043D\u043E\u0440\u043E\u0432\u0430 415\\childhood\\view\\childrenlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2FCD0FBB-F477-464C-85EB-201442D85CA1}|Childhood.csproj|solutionrelative:view\\childrenlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FCD0FBB-F477-464C-85EB-201442D85CA1}|Childhood.csproj|c:\\users\\nikon\\desktop\\\u043D\u0438\u043A\u043E\u043D\u043E\u0440\u043E\u0432\u0430 415\\childhood\\view\\moreaboutthechild.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FCD0FBB-F477-464C-85EB-201442D85CA1}|Childhood.csproj|solutionrelative:view\\moreaboutthechild.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FCD0FBB-F477-464C-85EB-201442D85CA1}|Childhood.csproj|c:\\users\\nikon\\desktop\\\u043D\u0438\u043A\u043E\u043D\u043E\u0440\u043E\u0432\u0430 415\\childhood\\view\\childrenlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FCD0FBB-F477-464C-85EB-201442D85CA1}|Childhood.csproj|solutionrelative:view\\childrenlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FCD0FBB-F477-464C-85EB-201442D85CA1}|Childhood.csproj|c:\\users\\nikon\\desktop\\\u043D\u0438\u043A\u043E\u043D\u043E\u0440\u043E\u0432\u0430 415\\childhood\\view\\moreaboutthechild.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2FCD0FBB-F477-464C-85EB-201442D85CA1}|Childhood.csproj|solutionrelative:view\\moreaboutthechild.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FCD0FBB-F477-464C-85EB-201442D85CA1}|Childhood.csproj|c:\\users\\nikon\\desktop\\\u043D\u0438\u043A\u043E\u043D\u043E\u0440\u043E\u0432\u0430 415\\childhood\\view\\addingachildren.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2FCD0FBB-F477-464C-85EB-201442D85CA1}|Childhood.csproj|solutionrelative:view\\addingachildren.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Authorization.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\nikon\\Desktop\\\u041D\u0438\u043A\u043E\u043D\u043E\u0440\u043E\u0432\u0430 415\\Childhood\\View\\Authorization.cs",
+              "RelativeDocumentMoniker": "View\\Authorization.cs",
+              "ToolTip": "C:\\Users\\nikon\\Desktop\\\u041D\u0438\u043A\u043E\u043D\u043E\u0440\u043E\u0432\u0430 415\\Childhood\\View\\Authorization.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "View\\Authorization.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T11:46:16.172Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ChildrenList.cs",
+              "DocumentMoniker": "C:\\Users\\nikon\\Desktop\\\u041D\u0438\u043A\u043E\u043D\u043E\u0440\u043E\u0432\u0430 415\\Childhood\\View\\ChildrenList.cs",
+              "RelativeDocumentMoniker": "View\\ChildrenList.cs",
+              "ToolTip": "C:\\Users\\nikon\\Desktop\\\u041D\u0438\u043A\u043E\u043D\u043E\u0440\u043E\u0432\u0430 415\\Childhood\\View\\ChildrenList.cs",
+              "RelativeToolTip": "View\\ChildrenList.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAgwEEAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T10:35:41.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ChildrenList.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\nikon\\Desktop\\\u041D\u0438\u043A\u043E\u043D\u043E\u0440\u043E\u0432\u0430 415\\Childhood\\View\\ChildrenList.cs",
+              "RelativeDocumentMoniker": "View\\ChildrenList.cs",
+              "ToolTip": "C:\\Users\\nikon\\Desktop\\\u041D\u0438\u043A\u043E\u043D\u043E\u0440\u043E\u0432\u0430 415\\Childhood\\View\\ChildrenList.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "View\\ChildrenList.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T10:35:38.539Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Moreaboutthechild.cs",
+              "DocumentMoniker": "C:\\Users\\nikon\\Desktop\\\u041D\u0438\u043A\u043E\u043D\u043E\u0440\u043E\u0432\u0430 415\\Childhood\\View\\Moreaboutthechild.cs",
+              "RelativeDocumentMoniker": "View\\Moreaboutthechild.cs",
+              "ToolTip": "C:\\Users\\nikon\\Desktop\\\u041D\u0438\u043A\u043E\u043D\u043E\u0440\u043E\u0432\u0430 415\\Childhood\\View\\Moreaboutthechild.cs",
+              "RelativeToolTip": "View\\Moreaboutthechild.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAEwDUAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T10:34:20.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Moreaboutthechild.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\nikon\\Desktop\\\u041D\u0438\u043A\u043E\u043D\u043E\u0440\u043E\u0432\u0430 415\\Childhood\\View\\Moreaboutthechild.cs",
+              "RelativeDocumentMoniker": "View\\Moreaboutthechild.cs",
+              "ToolTip": "C:\\Users\\nikon\\Desktop\\\u041D\u0438\u043A\u043E\u043D\u043E\u0440\u043E\u0432\u0430 415\\Childhood\\View\\Moreaboutthechild.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "View\\Moreaboutthechild.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T10:33:49.169Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AddingaChildren.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\nikon\\Desktop\\\u041D\u0438\u043A\u043E\u043D\u043E\u0440\u043E\u0432\u0430 415\\Childhood\\View\\AddingaChildren.cs",
+              "RelativeDocumentMoniker": "View\\AddingaChildren.cs",
+              "ToolTip": "C:\\Users\\nikon\\Desktop\\\u041D\u0438\u043A\u043E\u043D\u043E\u0440\u043E\u0432\u0430 415\\Childhood\\View\\AddingaChildren.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "View\\AddingaChildren.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T10:32:13.938Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище NSKindergartenNik" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Child">
+    <Key>
+      <PropertyRef Name="ChildID" />
+    </Key>
+    <Property Name="ChildID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ChildLastname" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ChildName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ChildFathername" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ChildResidence" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ChildHealthInsurancePolicy" Type="int" Nullable="false" />
+    <Property Name="ChildParentID" Type="int" Nullable="false" />
+    <Property Name="ChildAllergies" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ChildGroupID" Type="int" Nullable="false" />
+    <Property Name="ChildPhoto" Type="image" />
+  </EntityType>
+  <EntityType Name="Educator">
+    <Key>
+      <PropertyRef Name="EducatorID" />
+    </Key>
+    <Property Name="EducatorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EducatorEmployeeID" Type="int" Nullable="false" />
+    <Property Name="EducatorGroupID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeLastname" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="EmployeeName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="EmployeeFathername" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="EmployeeUserID" Type="int" Nullable="false" />
+    <Property Name="EmployeePassportdata" Type="int" Nullable="false" />
+    <Property Name="EmployeeTelephoneNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Groups">
+    <Key>
+      <PropertyRef Name="GroupID" />
+    </Key>
+    <Property Name="GroupID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GroupNumberGroup" Type="int" Nullable="false" />
+    <Property Name="GroupTypeGroup" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Parents">
+    <Key>
+      <PropertyRef Name="ParentID" />
+    </Key>
+    <Property Name="ParentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ParentLastname" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ParentName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ParentFathername" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ParentTelephoneNumber" Type="int" Nullable="false" />
+    <Property Name="ParentPassportdata" Type="int" Nullable="false" />
+    <Property Name="ParentEmaile" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ParentUserID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleName" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserLogin" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserPassword" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserRoleID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Child_Groups">
+    <End Role="Groups" Type="Self.Groups" Multiplicity="1" />
+    <End Role="Child" Type="Self.Child" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Groups">
+        <PropertyRef Name="GroupID" />
+      </Principal>
+      <Dependent Role="Child">
+        <PropertyRef Name="ChildGroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Child_Parents">
+    <End Role="Parents" Type="Self.Parents" Multiplicity="1" />
+    <End Role="Child" Type="Self.Child" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Parents">
+        <PropertyRef Name="ParentID" />
+      </Principal>
+      <Dependent Role="Child">
+        <PropertyRef Name="ChildParentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Educator_Employee">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+    <End Role="Educator" Type="Self.Educator" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="Educator">
+        <PropertyRef Name="EducatorEmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Educator_Groups">
+    <End Role="Groups" Type="Self.Groups" Multiplicity="1" />
+    <End Role="Educator" Type="Self.Educator" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Groups">
+        <PropertyRef Name="GroupID" />
+      </Principal>
+      <Dependent Role="Educator">
+        <PropertyRef Name="EducatorGroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employee_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="EmployeeUserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Parents_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Parents" Type="Self.Parents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Parents">
+        <PropertyRef Name="ParentUserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Role">
+    <End Role="Role" Type="Self.Role" Multiplicity="1" />
+    <End Role="User" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="UserRoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище NSKindergartenNikContainer">
+    <EntitySet Name="Child" EntityType="Self.Child" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Educator" EntityType="Self.Educator" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Groups" EntityType="Self.Groups" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Parents" EntityType="Self.Parents" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Child_Groups" Association="Self.FK_Child_Groups">
+      <End Role="Groups" EntitySet="Groups" />
+      <End Role="Child" EntitySet="Child" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Child_Parents" Association="Self.FK_Child_Parents">
+      <End Role="Parents" EntitySet="Parents" />
+      <End Role="Child" EntitySet="Child" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Educator_Employee" Association="Self.FK_Educator_Employee">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="Educator" EntitySet="Educator" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Educator_Groups" Association="Self.FK_Educator_Groups">
+      <End Role="Groups" EntitySet="Groups" />
+      <End Role="Educator" EntitySet="Educator" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employee_User" Association="Self.FK_Employee_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Employee" EntitySet="Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Parents_User" Association="Self.FK_Parents_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Parents" EntitySet="Parents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Role" Association="Self.FK_User_Role">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

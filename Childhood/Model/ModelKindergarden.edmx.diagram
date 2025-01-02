@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="97c37a08072141ae98072a7a98839c96" Name="Diagram1">
+        <EntityTypeShape EntityType="NSDBKindergarden.Child" Width="1.5" PointX="7.5" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="NSDBKindergarden.Educator" Width="1.5" PointX="7.5" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="NSDBKindergarden.Employee" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="NSDBKindergarden.Groups" Width="1.5" PointX="5.25" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NSDBKindergarden.Parents" Width="1.5" PointX="5.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="NSDBKindergarden.Role" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="NSDBKindergarden.User" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
+        <AssociationConnector Association="NSDBKindergarden.FK_Child_Groups" ManuallyRouted="false" />
+        <AssociationConnector Association="NSDBKindergarden.FK_Child_Parents" ManuallyRouted="false" />
+        <AssociationConnector Association="NSDBKindergarden.FK_Educator_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="NSDBKindergarden.FK_Educator_Groups" ManuallyRouted="false" />
+        <AssociationConnector Association="NSDBKindergarden.FK_Employee_User" ManuallyRouted="false" />
+        <AssociationConnector Association="NSDBKindergarden.FK_Parents_User" ManuallyRouted="false" />
+        <AssociationConnector Association="NSDBKindergarden.FK_User_Role" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,55 @@
+C:\Users\stud.KIT\Documents\Никонорова 415\Childhood\bin\Debug\Childhood.exe.config
+C:\Users\stud.KIT\Documents\Никонорова 415\Childhood\bin\Debug\Childhood.exe
+C:\Users\stud.KIT\Documents\Никонорова 415\Childhood\bin\Debug\Childhood.pdb
+C:\Users\stud.KIT\Documents\Никонорова 415\Childhood\obj\Debug\Childhood.csproj.AssemblyReference.cache
+C:\Users\stud.KIT\Documents\Никонорова 415\Childhood\obj\Debug\Childhood.csproj.SuggestedBindingRedirects.cache
+C:\Users\stud.KIT\Documents\Никонорова 415\Childhood\obj\Debug\Childhood.Properties.Resources.resources
+C:\Users\stud.KIT\Documents\Никонорова 415\Childhood\obj\Debug\Childhood.csproj.GenerateResource.cache
+C:\Users\stud.KIT\Documents\Никонорова 415\Childhood\obj\Debug\Childhood.csproj.CoreCompileInputs.cache
+C:\Users\stud.KIT\Documents\Никонорова 415\Childhood\obj\Debug\Childhood.exe
+C:\Users\stud.KIT\Documents\Никонорова 415\Childhood\obj\Debug\Childhood.pdb
+C:\Users\stud.KIT\Documents\Никонорова 415\Childhood\bin\Debug\EntityFramework.dll
+C:\Users\stud.KIT\Documents\Никонорова 415\Childhood\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\stud.KIT\Documents\Никонорова 415\Childhood\bin\Debug\EntityFramework.xml
+C:\Users\stud.KIT\Documents\Никонорова 415\Childhood\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\stud.KIT\Documents\Никонорова 415\Childhood\obj\Debug\Childhood.csproj.CopyComplete
+C:\Users\stud.KIT\Documents\Никонорова 415\Childhood\obj\Debug\Childhood.Avtorizachiya.resources
+C:\Users\stud.KIT\Documents\Никонорова 415\Childhood\obj\Debug\Childhood.ChildrenList.resources
+C:\Users\stud.KIT\Documents\Никонорова 415\Childhood\obj\Debug\Childhood.View.Moreaboutthechild.resources
+C:\Users\nikon\Downloads\Telegram Desktop\Никонорова 415\Childhood\obj\Debug\Childhood.csproj.AssemblyReference.cache
+C:\Users\nikon\Downloads\Telegram Desktop\Никонорова 415\Childhood\obj\Debug\Childhood.ChildrenList.resources
+C:\Users\nikon\Downloads\Telegram Desktop\Никонорова 415\Childhood\obj\Debug\Childhood.Avtorizachiya.resources
+C:\Users\nikon\Downloads\Telegram Desktop\Никонорова 415\Childhood\obj\Debug\Childhood.Properties.Resources.resources
+C:\Users\nikon\Downloads\Telegram Desktop\Никонорова 415\Childhood\obj\Debug\Childhood.View.Moreaboutthechild.resources
+C:\Users\nikon\Downloads\Telegram Desktop\Никонорова 415\Childhood\obj\Debug\Childhood.csproj.GenerateResource.cache
+C:\Users\nikon\Downloads\Telegram Desktop\Никонорова 415\Childhood\obj\Debug\Childhood.csproj.CoreCompileInputs.cache
+C:\Users\nikon\Downloads\Telegram Desktop\Никонорова 415\Childhood\bin\Debug\Childhood.exe.config
+C:\Users\nikon\Downloads\Telegram Desktop\Никонорова 415\Childhood\bin\Debug\Childhood.exe
+C:\Users\nikon\Downloads\Telegram Desktop\Никонорова 415\Childhood\bin\Debug\Childhood.pdb
+C:\Users\nikon\Downloads\Telegram Desktop\Никонорова 415\Childhood\bin\Debug\EntityFramework.dll
+C:\Users\nikon\Downloads\Telegram Desktop\Никонорова 415\Childhood\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\nikon\Downloads\Telegram Desktop\Никонорова 415\Childhood\bin\Debug\EntityFramework.xml
+C:\Users\nikon\Downloads\Telegram Desktop\Никонорова 415\Childhood\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\nikon\Downloads\Telegram Desktop\Никонорова 415\Childhood\obj\Debug\Childhood.csproj.Up2Date
+C:\Users\nikon\Downloads\Telegram Desktop\Никонорова 415\Childhood\obj\Debug\Childhood.exe
+C:\Users\nikon\Downloads\Telegram Desktop\Никонорова 415\Childhood\obj\Debug\Childhood.pdb
+C:\Users\nikon\Downloads\Telegram Desktop\Никонорова 415\Childhood\obj\Debug\Childhood.View.AddingaParent.resources
+C:\Users\nikon\Desktop\Никонорова 415\Childhood\bin\Debug\Childhood.exe.config
+C:\Users\nikon\Desktop\Никонорова 415\Childhood\bin\Debug\Childhood.exe
+C:\Users\nikon\Desktop\Никонорова 415\Childhood\bin\Debug\Childhood.pdb
+C:\Users\nikon\Desktop\Никонорова 415\Childhood\bin\Debug\EntityFramework.dll
+C:\Users\nikon\Desktop\Никонорова 415\Childhood\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\nikon\Desktop\Никонорова 415\Childhood\bin\Debug\EntityFramework.xml
+C:\Users\nikon\Desktop\Никонорова 415\Childhood\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\nikon\Desktop\Никонорова 415\Childhood\obj\Debug\Childhood.csproj.AssemblyReference.cache
+C:\Users\nikon\Desktop\Никонорова 415\Childhood\obj\Debug\Childhood.View.AddingaChildren.resources
+C:\Users\nikon\Desktop\Никонорова 415\Childhood\obj\Debug\Childhood.View.AddingaParent.resources
+C:\Users\nikon\Desktop\Никонорова 415\Childhood\obj\Debug\Childhood.ChildrenList.resources
+C:\Users\nikon\Desktop\Никонорова 415\Childhood\obj\Debug\Childhood.Avtorizachiya.resources
+C:\Users\nikon\Desktop\Никонорова 415\Childhood\obj\Debug\Childhood.Properties.Resources.resources
+C:\Users\nikon\Desktop\Никонорова 415\Childhood\obj\Debug\Childhood.View.Moreaboutthechild.resources
+C:\Users\nikon\Desktop\Никонорова 415\Childhood\obj\Debug\Childhood.csproj.GenerateResource.cache
+C:\Users\nikon\Desktop\Никонорова 415\Childhood\obj\Debug\Childhood.csproj.CoreCompileInputs.cache
+C:\Users\nikon\Desktop\Никонорова 415\Childhood\obj\Debug\Childhood.csproj.Up2Date
+C:\Users\nikon\Desktop\Никонорова 415\Childhood\obj\Debug\Childhood.exe
+C:\Users\nikon\Desktop\Никонорова 415\Childhood\obj\Debug\Childhood.pdb
