@@ -1,0 +1,353 @@
+USE [master]
+GO
+/****** Object:  Database [DB_DS_Nikonorova]    Script Date: 02.01.2025 23:15:52 ******/
+CREATE DATABASE [DB_DS_Nikonorova]
+ CONTAINMENT = NONE
+ ON  PRIMARY 
+( NAME = N'DB_DS_Nikonorova', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\DB_DS_Nikonorova.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
+ LOG ON 
+( NAME = N'DB_DS_Nikonorova_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\DB_DS_Nikonorova_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+ WITH CATALOG_COLLATION = DATABASE_DEFAULT, LEDGER = OFF
+GO
+ALTER DATABASE [DB_DS_Nikonorova] SET COMPATIBILITY_LEVEL = 160
+GO
+IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
+begin
+EXEC [DB_DS_Nikonorova].[dbo].[sp_fulltext_database] @action = 'enable'
+end
+GO
+ALTER DATABASE [DB_DS_Nikonorova] SET ANSI_NULL_DEFAULT OFF 
+GO
+ALTER DATABASE [DB_DS_Nikonorova] SET ANSI_NULLS OFF 
+GO
+ALTER DATABASE [DB_DS_Nikonorova] SET ANSI_PADDING OFF 
+GO
+ALTER DATABASE [DB_DS_Nikonorova] SET ANSI_WARNINGS OFF 
+GO
+ALTER DATABASE [DB_DS_Nikonorova] SET ARITHABORT OFF 
+GO
+ALTER DATABASE [DB_DS_Nikonorova] SET AUTO_CLOSE OFF 
+GO
+ALTER DATABASE [DB_DS_Nikonorova] SET AUTO_SHRINK OFF 
+GO
+ALTER DATABASE [DB_DS_Nikonorova] SET AUTO_UPDATE_STATISTICS ON 
+GO
+ALTER DATABASE [DB_DS_Nikonorova] SET CURSOR_CLOSE_ON_COMMIT OFF 
+GO
+ALTER DATABASE [DB_DS_Nikonorova] SET CURSOR_DEFAULT  GLOBAL 
+GO
+ALTER DATABASE [DB_DS_Nikonorova] SET CONCAT_NULL_YIELDS_NULL OFF 
+GO
+ALTER DATABASE [DB_DS_Nikonorova] SET NUMERIC_ROUNDABORT OFF 
+GO
+ALTER DATABASE [DB_DS_Nikonorova] SET QUOTED_IDENTIFIER OFF 
+GO
+ALTER DATABASE [DB_DS_Nikonorova] SET RECURSIVE_TRIGGERS OFF 
+GO
+ALTER DATABASE [DB_DS_Nikonorova] SET  DISABLE_BROKER 
+GO
+ALTER DATABASE [DB_DS_Nikonorova] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+GO
+ALTER DATABASE [DB_DS_Nikonorova] SET DATE_CORRELATION_OPTIMIZATION OFF 
+GO
+ALTER DATABASE [DB_DS_Nikonorova] SET TRUSTWORTHY OFF 
+GO
+ALTER DATABASE [DB_DS_Nikonorova] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+GO
+ALTER DATABASE [DB_DS_Nikonorova] SET PARAMETERIZATION SIMPLE 
+GO
+ALTER DATABASE [DB_DS_Nikonorova] SET READ_COMMITTED_SNAPSHOT OFF 
+GO
+ALTER DATABASE [DB_DS_Nikonorova] SET HONOR_BROKER_PRIORITY OFF 
+GO
+ALTER DATABASE [DB_DS_Nikonorova] SET RECOVERY SIMPLE 
+GO
+ALTER DATABASE [DB_DS_Nikonorova] SET  MULTI_USER 
+GO
+ALTER DATABASE [DB_DS_Nikonorova] SET PAGE_VERIFY CHECKSUM  
+GO
+ALTER DATABASE [DB_DS_Nikonorova] SET DB_CHAINING OFF 
+GO
+ALTER DATABASE [DB_DS_Nikonorova] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+GO
+ALTER DATABASE [DB_DS_Nikonorova] SET TARGET_RECOVERY_TIME = 0 SECONDS 
+GO
+ALTER DATABASE [DB_DS_Nikonorova] SET DELAYED_DURABILITY = DISABLED 
+GO
+ALTER DATABASE [DB_DS_Nikonorova] SET ACCELERATED_DATABASE_RECOVERY = OFF  
+GO
+EXEC sys.sp_db_vardecimal_storage_format N'DB_DS_Nikonorova', N'ON'
+GO
+ALTER DATABASE [DB_DS_Nikonorova] SET QUERY_STORE = ON
+GO
+ALTER DATABASE [DB_DS_Nikonorova] SET QUERY_STORE (OPERATION_MODE = READ_WRITE, CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 30), DATA_FLUSH_INTERVAL_SECONDS = 900, INTERVAL_LENGTH_MINUTES = 60, MAX_STORAGE_SIZE_MB = 1000, QUERY_CAPTURE_MODE = AUTO, SIZE_BASED_CLEANUP_MODE = AUTO, MAX_PLANS_PER_QUERY = 200, WAIT_STATS_CAPTURE_MODE = ON)
+GO
+USE [DB_DS_Nikonorova]
+GO
+/****** Object:  Table [dbo].[Child]    Script Date: 02.01.2025 23:15:52 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Child](
+	[ChildID] [int] IDENTITY(1,1) NOT NULL,
+	[ChildLastname] [nvarchar](50) NOT NULL,
+	[ChildName] [nvarchar](50) NOT NULL,
+	[ChildFathername] [nvarchar](50) NOT NULL,
+	[ChildCityofResidence] [nvarchar](50) NOT NULL,
+	[ChildHealthInsurancePolicy] [varchar](50) NOT NULL,
+	[ChildParentID] [int] NOT NULL,
+	[ChildAllergies] [nvarchar](50) NOT NULL,
+	[ChildGroupID] [int] NOT NULL,
+	[ChildPhoto] [image] NULL,
+ CONSTRAINT [PK_Child] PRIMARY KEY CLUSTERED 
+(
+	[ChildID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Educator]    Script Date: 02.01.2025 23:15:53 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Educator](
+	[EducatorID] [int] IDENTITY(1,1) NOT NULL,
+	[EducatorEmployeeID] [int] NOT NULL,
+	[EducatorGroupID] [int] NOT NULL,
+ CONSTRAINT [PK_Educator] PRIMARY KEY CLUSTERED 
+(
+	[EducatorID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Employee]    Script Date: 02.01.2025 23:15:53 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Employee](
+	[EmployeeID] [int] IDENTITY(1,1) NOT NULL,
+	[EmployeeLastname] [nvarchar](50) NOT NULL,
+	[EmployeeName] [nvarchar](50) NOT NULL,
+	[EmployeeFathername] [nvarchar](50) NOT NULL,
+	[EmployeeUserID] [int] NOT NULL,
+	[EmployeeNumPassportdata] [int] NOT NULL,
+	[EmployeeSeriaPassportdata] [int] NOT NULL,
+	[EmployeeTelephoneNumber] [varchar](50) NOT NULL,
+	[EmployeeEmail] [nvarchar](50) NOT NULL,
+ CONSTRAINT [PK_Employee] PRIMARY KEY CLUSTERED 
+(
+	[EmployeeID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Groups]    Script Date: 02.01.2025 23:15:53 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Groups](
+	[GroupID] [int] IDENTITY(1,1) NOT NULL,
+	[GroupNumberGroup] [int] NOT NULL,
+	[GroupTypeGroup] [nvarchar](50) NOT NULL,
+	[GroupNameGroup] [nvarchar](50) NOT NULL,
+ CONSTRAINT [PK_Группы] PRIMARY KEY CLUSTERED 
+(
+	[GroupID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Parents]    Script Date: 02.01.2025 23:15:53 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Parents](
+	[ParentID] [int] IDENTITY(1,1) NOT NULL,
+	[ParentLastname] [nvarchar](50) NOT NULL,
+	[ParentName] [nvarchar](50) NOT NULL,
+	[ParentFathername] [nvarchar](50) NOT NULL,
+	[ParentTelephoneNumber] [varchar](50) NOT NULL,
+	[ParentNumPassportdata] [int] NOT NULL,
+	[ParentSeriaPassportdata] [int] NOT NULL,
+	[ParentEmaile] [nvarchar](50) NOT NULL,
+	[ParentUserID] [int] NOT NULL,
+ CONSTRAINT [PK_Родители] PRIMARY KEY CLUSTERED 
+(
+	[ParentID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Role]    Script Date: 02.01.2025 23:15:53 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Role](
+	[RoleID] [int] IDENTITY(1,1) NOT NULL,
+	[RoleName] [nvarchar](50) NOT NULL,
+ CONSTRAINT [PK_Role] PRIMARY KEY CLUSTERED 
+(
+	[RoleID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[User]    Script Date: 02.01.2025 23:15:53 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[User](
+	[UserID] [int] IDENTITY(1,1) NOT NULL,
+	[UserLogin] [varchar](50) NOT NULL,
+	[UserPassword] [varchar](50) NOT NULL,
+	[UserRoleID] [int] NOT NULL,
+ CONSTRAINT [PK_User] PRIMARY KEY CLUSTERED 
+(
+	[UserID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET IDENTITY_INSERT [dbo].[Child] ON 
+
+INSERT [dbo].[Child] ([ChildID], [ChildLastname], [ChildName], [ChildFathername], [ChildCityofResidence], [ChildHealthInsurancePolicy], [ChildParentID], [ChildAllergies], [ChildGroupID], [ChildPhoto]) VALUES (1, N'Иванов', N'Алексей', N'Сергеевич', N'Санкт-Петербург', N'123-456-789 01', 1, N'Пыльца', 5, NULL)
+INSERT [dbo].[Child] ([ChildID], [ChildLastname], [ChildName], [ChildFathername], [ChildCityofResidence], [ChildHealthInsurancePolicy], [ChildParentID], [ChildAllergies], [ChildGroupID], [ChildPhoto]) VALUES (2, N'Иванов', N'Сергей', N'Сергеевич', N'Санкт-Петербург', N'987-654-321 02', 1, N'Орехи', 6, NULL)
+INSERT [dbo].[Child] ([ChildID], [ChildLastname], [ChildName], [ChildFathername], [ChildCityofResidence], [ChildHealthInsurancePolicy], [ChildParentID], [ChildAllergies], [ChildGroupID], [ChildPhoto]) VALUES (3, N'Петров', N'Андрей', N'Викторович', N'Санкт-Петербург', N'456-789-123 03', 2, N'Лактоза', 4, NULL)
+INSERT [dbo].[Child] ([ChildID], [ChildLastname], [ChildName], [ChildFathername], [ChildCityofResidence], [ChildHealthInsurancePolicy], [ChildParentID], [ChildAllergies], [ChildGroupID], [ChildPhoto]) VALUES (5, N'Сидоров', N'Дмитрий', N'Игоревич', N'Санкт-Петербург', N'321-654-987 04', 3, N'Нет', 3, NULL)
+INSERT [dbo].[Child] ([ChildID], [ChildLastname], [ChildName], [ChildFathername], [ChildCityofResidence], [ChildHealthInsurancePolicy], [ChildParentID], [ChildAllergies], [ChildGroupID], [ChildPhoto]) VALUES (6, N'Сидорова', N'Екатерина', N'Игоревна', N'Санкт-Петербург', N'654-321-789 05', 3, N'Пыльца', 7, NULL)
+INSERT [dbo].[Child] ([ChildID], [ChildLastname], [ChildName], [ChildFathername], [ChildCityofResidence], [ChildHealthInsurancePolicy], [ChildParentID], [ChildAllergies], [ChildGroupID], [ChildPhoto]) VALUES (7, N'Сидоров', N'Алексей', N'Игоревич', N'Санкт-Петербург', N'789-123-456 06', 3, N'Нет', 3, NULL)
+INSERT [dbo].[Child] ([ChildID], [ChildLastname], [ChildName], [ChildFathername], [ChildCityofResidence], [ChildHealthInsurancePolicy], [ChildParentID], [ChildAllergies], [ChildGroupID], [ChildPhoto]) VALUES (8, N'Смирнов', N'Артем', N'Валерьевич', N'Санкт-Петербург', N'147-258-369 07', 4, N'Лактоза', 6, NULL)
+INSERT [dbo].[Child] ([ChildID], [ChildLastname], [ChildName], [ChildFathername], [ChildCityofResidence], [ChildHealthInsurancePolicy], [ChildParentID], [ChildAllergies], [ChildGroupID], [ChildPhoto]) VALUES (9, N'Смирнова', N'Ольга', N'Валерьевна', N'Санкт-Петербург', N'258-369-147 08', 4, N'Лактоза', 6, NULL)
+INSERT [dbo].[Child] ([ChildID], [ChildLastname], [ChildName], [ChildFathername], [ChildCityofResidence], [ChildHealthInsurancePolicy], [ChildParentID], [ChildAllergies], [ChildGroupID], [ChildPhoto]) VALUES (10, N'Кузнецов', N'Павел', N'Александрович', N'Санкт-Петербург', N'369-147-258 09', 5, N'Нет', 4, NULL)
+INSERT [dbo].[Child] ([ChildID], [ChildLastname], [ChildName], [ChildFathername], [ChildCityofResidence], [ChildHealthInsurancePolicy], [ChildParentID], [ChildAllergies], [ChildGroupID], [ChildPhoto]) VALUES (13, N'Васильев', N'Михаил', N'Андреевич', N'Санкт-Петербург', N'159-753-486 10', 6, N'Нет', 7, NULL)
+INSERT [dbo].[Child] ([ChildID], [ChildLastname], [ChildName], [ChildFathername], [ChildCityofResidence], [ChildHealthInsurancePolicy], [ChildParentID], [ChildAllergies], [ChildGroupID], [ChildPhoto]) VALUES (14, N'Васильева', N'Светлана', N'Андреевна', N'Санкт-Петербург', N'753-159-486 11', 6, N'Нет', 3, NULL)
+INSERT [dbo].[Child] ([ChildID], [ChildLastname], [ChildName], [ChildFathername], [ChildCityofResidence], [ChildHealthInsurancePolicy], [ChildParentID], [ChildAllergies], [ChildGroupID], [ChildPhoto]) VALUES (15, N'Васильев', N'Денис', N'Андреевич', N'Санкт-Петербург', N'951-357-864 12', 6, N'Нет', 5, NULL)
+INSERT [dbo].[Child] ([ChildID], [ChildLastname], [ChildName], [ChildFathername], [ChildCityofResidence], [ChildHealthInsurancePolicy], [ChildParentID], [ChildAllergies], [ChildGroupID], [ChildPhoto]) VALUES (18, N'Федоров', N'Константин', N'Юрьевич', N'Санкт-Петербург', N'159-246-753 13', 7, N'Пыльца', 5, NULL)
+INSERT [dbo].[Child] ([ChildID], [ChildLastname], [ChildName], [ChildFathername], [ChildCityofResidence], [ChildHealthInsurancePolicy], [ChildParentID], [ChildAllergies], [ChildGroupID], [ChildPhoto]) VALUES (19, N'Николаев', N'Роман', N'Александрович', N'Санкт-Петербург', N'246-135-789 14', 8, N'Цитрус', 4, NULL)
+INSERT [dbo].[Child] ([ChildID], [ChildLastname], [ChildName], [ChildFathername], [ChildCityofResidence], [ChildHealthInsurancePolicy], [ChildParentID], [ChildAllergies], [ChildGroupID], [ChildPhoto]) VALUES (21, N'Николаева', N'Ирина', N'Александровна', N'Санкт-Петербург', N'135-246-789 15', 8, N'Цитрус', 7, NULL)
+INSERT [dbo].[Child] ([ChildID], [ChildLastname], [ChildName], [ChildFathername], [ChildCityofResidence], [ChildHealthInsurancePolicy], [ChildParentID], [ChildAllergies], [ChildGroupID], [ChildPhoto]) VALUES (22, N'Морозов', N'Валентин', N'Викторович', N'Санкт-Петербург', N'369-258-147 16', 9, N'Нет', 7, NULL)
+INSERT [dbo].[Child] ([ChildID], [ChildLastname], [ChildName], [ChildFathername], [ChildCityofResidence], [ChildHealthInsurancePolicy], [ChildParentID], [ChildAllergies], [ChildGroupID], [ChildPhoto]) VALUES (23, N'Морозова', N'Татьяна', N'Викторовна', N'Санкт-Петербург', N'258-369-147 17', 9, N'Нет', 6, NULL)
+INSERT [dbo].[Child] ([ChildID], [ChildLastname], [ChildName], [ChildFathername], [ChildCityofResidence], [ChildHealthInsurancePolicy], [ChildParentID], [ChildAllergies], [ChildGroupID], [ChildPhoto]) VALUES (24, N'Морозов', N'Евгений', N'Викторович', N'Санкт-Петербург', N'147-258-369 18', 9, N'Нет', 5, NULL)
+INSERT [dbo].[Child] ([ChildID], [ChildLastname], [ChildName], [ChildFathername], [ChildCityofResidence], [ChildHealthInsurancePolicy], [ChildParentID], [ChildAllergies], [ChildGroupID], [ChildPhoto]) VALUES (25, N'Орлов', N'Арсений', N'Дмитриевич', N'Санкт-Петербург', N'321-987-654 19  
+', 10, N'Лактоза', 3, NULL)
+INSERT [dbo].[Child] ([ChildID], [ChildLastname], [ChildName], [ChildFathername], [ChildCityofResidence], [ChildHealthInsurancePolicy], [ChildParentID], [ChildAllergies], [ChildGroupID], [ChildPhoto]) VALUES (26, N'Орлова', N'Елена', N'Дмитриевна', N'Санкт-Петербург', N'654-321-987 20  ', 10, N'Лактоза', 7, NULL)
+SET IDENTITY_INSERT [dbo].[Child] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Educator] ON 
+
+INSERT [dbo].[Educator] ([EducatorID], [EducatorEmployeeID], [EducatorGroupID]) VALUES (1, 6, 3)
+INSERT [dbo].[Educator] ([EducatorID], [EducatorEmployeeID], [EducatorGroupID]) VALUES (2, 7, 4)
+INSERT [dbo].[Educator] ([EducatorID], [EducatorEmployeeID], [EducatorGroupID]) VALUES (3, 8, 5)
+INSERT [dbo].[Educator] ([EducatorID], [EducatorEmployeeID], [EducatorGroupID]) VALUES (4, 10, 6)
+INSERT [dbo].[Educator] ([EducatorID], [EducatorEmployeeID], [EducatorGroupID]) VALUES (5, 11, 7)
+SET IDENTITY_INSERT [dbo].[Educator] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Employee] ON 
+
+INSERT [dbo].[Employee] ([EmployeeID], [EmployeeLastname], [EmployeeName], [EmployeeFathername], [EmployeeUserID], [EmployeeNumPassportdata], [EmployeeSeriaPassportdata], [EmployeeTelephoneNumber], [EmployeeEmail]) VALUES (1, N'Иванов', N'Сергей', N'Александрович', 1, 1234, 567890, N'+7 (999) 123-45-67', N'sergey.ivanov@example.com')
+INSERT [dbo].[Employee] ([EmployeeID], [EmployeeLastname], [EmployeeName], [EmployeeFathername], [EmployeeUserID], [EmployeeNumPassportdata], [EmployeeSeriaPassportdata], [EmployeeTelephoneNumber], [EmployeeEmail]) VALUES (3, N'Петрова', N'Анна', N'Викторовна', 2, 4321, 987654, N'+7 (999) 234-56-78', N'anna.petrov@example.com')
+INSERT [dbo].[Employee] ([EmployeeID], [EmployeeLastname], [EmployeeName], [EmployeeFathername], [EmployeeUserID], [EmployeeNumPassportdata], [EmployeeSeriaPassportdata], [EmployeeTelephoneNumber], [EmployeeEmail]) VALUES (4, N'Сидоров', N'Дмитрий', N'Сергеевич', 3, 5678, 123456, N'+7 (999) 345-67-89', N'dmitry.sidorov@example.com')
+INSERT [dbo].[Employee] ([EmployeeID], [EmployeeLastname], [EmployeeName], [EmployeeFathername], [EmployeeUserID], [EmployeeNumPassportdata], [EmployeeSeriaPassportdata], [EmployeeTelephoneNumber], [EmployeeEmail]) VALUES (5, N'Кузнецова', N'Мария', N'Игоревна', 4, 8765, 654321, N'+7 (999) 456-78-90', N'maria.kuznetsova@example.com')
+INSERT [dbo].[Employee] ([EmployeeID], [EmployeeLastname], [EmployeeName], [EmployeeFathername], [EmployeeUserID], [EmployeeNumPassportdata], [EmployeeSeriaPassportdata], [EmployeeTelephoneNumber], [EmployeeEmail]) VALUES (6, N'Васильева', N'Алёна', N'Павловна', 5, 1357, 246801, N'+7 (999) 567-89-01', N'alena.vasiliev@example.com')
+INSERT [dbo].[Employee] ([EmployeeID], [EmployeeLastname], [EmployeeName], [EmployeeFathername], [EmployeeUserID], [EmployeeNumPassportdata], [EmployeeSeriaPassportdata], [EmployeeTelephoneNumber], [EmployeeEmail]) VALUES (7, N'Михайлова', N'Ольга', N'Николаевна', 6, 2468, 135790, N'+7 (999) 678-90-12', N'olga.mikhailova@example.com')
+INSERT [dbo].[Employee] ([EmployeeID], [EmployeeLastname], [EmployeeName], [EmployeeFathername], [EmployeeUserID], [EmployeeNumPassportdata], [EmployeeSeriaPassportdata], [EmployeeTelephoneNumber], [EmployeeEmail]) VALUES (8, N'Новикова', N'Ирина', N'Андреевна', 7, 8642, 975312, N'+7 (999) 789-01-23', N'irina.novikova@example.com')
+INSERT [dbo].[Employee] ([EmployeeID], [EmployeeLastname], [EmployeeName], [EmployeeFathername], [EmployeeUserID], [EmployeeNumPassportdata], [EmployeeSeriaPassportdata], [EmployeeTelephoneNumber], [EmployeeEmail]) VALUES (10, N'Смирнова', N'Вера', N'Васильевна', 8, 3579, 864209, N'+7 (999) 890-12-34', N'nikolai.smirnov@example.com')
+INSERT [dbo].[Employee] ([EmployeeID], [EmployeeLastname], [EmployeeName], [EmployeeFathername], [EmployeeUserID], [EmployeeNumPassportdata], [EmployeeSeriaPassportdata], [EmployeeTelephoneNumber], [EmployeeEmail]) VALUES (11, N'Федорова', N'Екатерина', N'Дмитриевна', 9, 1593, 753159, N'+7 (999) 901-23-45', N'ekaterina.fedorova@example.com')
+SET IDENTITY_INSERT [dbo].[Employee] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Groups] ON 
+
+INSERT [dbo].[Groups] ([GroupID], [GroupNumberGroup], [GroupTypeGroup], [GroupNameGroup]) VALUES (3, 145, N'Ясельная', N'Жемчужинки')
+INSERT [dbo].[Groups] ([GroupID], [GroupNumberGroup], [GroupTypeGroup], [GroupNameGroup]) VALUES (4, 154, N'Младшая', N'Какаду')
+INSERT [dbo].[Groups] ([GroupID], [GroupNumberGroup], [GroupTypeGroup], [GroupNameGroup]) VALUES (5, 415, N'Средняя', N'Парусник')
+INSERT [dbo].[Groups] ([GroupID], [GroupNumberGroup], [GroupTypeGroup], [GroupNameGroup]) VALUES (6, 451, N'Старшая', N'Бригантина')
+INSERT [dbo].[Groups] ([GroupID], [GroupNumberGroup], [GroupTypeGroup], [GroupNameGroup]) VALUES (7, 514, N'Подготовительная', N'Совята')
+SET IDENTITY_INSERT [dbo].[Groups] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Parents] ON 
+
+INSERT [dbo].[Parents] ([ParentID], [ParentLastname], [ParentName], [ParentFathername], [ParentTelephoneNumber], [ParentNumPassportdata], [ParentSeriaPassportdata], [ParentEmaile], [ParentUserID]) VALUES (1, N'Иванова', N'Анна', N'Сергеевна', N'+7 (900) 123 45 67', 1234, 123456, N'anna.ivanova@example.com', 10)
+INSERT [dbo].[Parents] ([ParentID], [ParentLastname], [ParentName], [ParentFathername], [ParentTelephoneNumber], [ParentNumPassportdata], [ParentSeriaPassportdata], [ParentEmaile], [ParentUserID]) VALUES (2, N'Петрова', N'Мария', N'Александровна', N'+7 (900) 234 56 78', 2335, 234567, N'maria.petrova@example.com', 11)
+INSERT [dbo].[Parents] ([ParentID], [ParentLastname], [ParentName], [ParentFathername], [ParentTelephoneNumber], [ParentNumPassportdata], [ParentSeriaPassportdata], [ParentEmaile], [ParentUserID]) VALUES (3, N'Сидорова', N'Екатерина', N'Владимировна', N'+7 (900) 345 67 89', 3456, 345678, N'ekaterina.sidorova@example.com', 12)
+INSERT [dbo].[Parents] ([ParentID], [ParentLastname], [ParentName], [ParentFathername], [ParentTelephoneNumber], [ParentNumPassportdata], [ParentSeriaPassportdata], [ParentEmaile], [ParentUserID]) VALUES (4, N'Смирнова', N'Ольга', N'Николаевна', N'+7 (900) 456 78 90', 4567, 456789, N'olga.smirnova@example.com', 13)
+INSERT [dbo].[Parents] ([ParentID], [ParentLastname], [ParentName], [ParentFathername], [ParentTelephoneNumber], [ParentNumPassportdata], [ParentSeriaPassportdata], [ParentEmaile], [ParentUserID]) VALUES (5, N'Кузнецова', N'Наталья', N'Дмитриевна', N'+7 (900) 567 89 01', 5678, 567890, N'natalya.kuznetsova@example.com', 14)
+INSERT [dbo].[Parents] ([ParentID], [ParentLastname], [ParentName], [ParentFathername], [ParentTelephoneNumber], [ParentNumPassportdata], [ParentSeriaPassportdata], [ParentEmaile], [ParentUserID]) VALUES (6, N'Васильева', N'Светлана', N'Викторовна', N'+7 (900) 678 90 12', 6789, 678901, N'svetlana.vasilieva@example.com', 15)
+INSERT [dbo].[Parents] ([ParentID], [ParentLastname], [ParentName], [ParentFathername], [ParentTelephoneNumber], [ParentNumPassportdata], [ParentSeriaPassportdata], [ParentEmaile], [ParentUserID]) VALUES (7, N'Федорова', N'Ирина', N'Павловна', N'+7 (900) 789 01 23', 7890, 789012, N'irina.fedorova@example.com', 16)
+INSERT [dbo].[Parents] ([ParentID], [ParentLastname], [ParentName], [ParentFathername], [ParentTelephoneNumber], [ParentNumPassportdata], [ParentSeriaPassportdata], [ParentEmaile], [ParentUserID]) VALUES (8, N'Николаева', N'Виктория', N'Сергеевна', N'+7 (900) 890 12 34', 8901, 890123, N'viktoria.nikolaeva@example.com', 17)
+INSERT [dbo].[Parents] ([ParentID], [ParentLastname], [ParentName], [ParentFathername], [ParentTelephoneNumber], [ParentNumPassportdata], [ParentSeriaPassportdata], [ParentEmaile], [ParentUserID]) VALUES (9, N'Морозова', N'Татьяна', N'Юрьевна', N'+7 (900) 901 23 45', 9012, 901234, N'tatiana.morozova@example.com', 18)
+INSERT [dbo].[Parents] ([ParentID], [ParentLastname], [ParentName], [ParentFathername], [ParentTelephoneNumber], [ParentNumPassportdata], [ParentSeriaPassportdata], [ParentEmaile], [ParentUserID]) VALUES (10, N'Орлова', N'Юлия', N'Андреевна', N'+7 (900) 012 34 56', 1234, 123456, N'yulia.orlova@example.com', 19)
+SET IDENTITY_INSERT [dbo].[Parents] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Role] ON 
+
+INSERT [dbo].[Role] ([RoleID], [RoleName]) VALUES (1, N'Системный администратор')
+INSERT [dbo].[Role] ([RoleID], [RoleName]) VALUES (2, N'Директор')
+INSERT [dbo].[Role] ([RoleID], [RoleName]) VALUES (3, N'Заместитель директора')
+INSERT [dbo].[Role] ([RoleID], [RoleName]) VALUES (4, N'Бухгалтер')
+INSERT [dbo].[Role] ([RoleID], [RoleName]) VALUES (5, N'Воспитатель')
+INSERT [dbo].[Role] ([RoleID], [RoleName]) VALUES (6, N'Родитель')
+SET IDENTITY_INSERT [dbo].[Role] OFF
+GO
+SET IDENTITY_INSERT [dbo].[User] ON 
+
+INSERT [dbo].[User] ([UserID], [UserLogin], [UserPassword], [UserRoleID]) VALUES (1, N'SisAdmin', N'SisAdmin', 1)
+INSERT [dbo].[User] ([UserID], [UserLogin], [UserPassword], [UserRoleID]) VALUES (2, N'Director', N'pass', 2)
+INSERT [dbo].[User] ([UserID], [UserLogin], [UserPassword], [UserRoleID]) VALUES (3, N'ZamDir', N'pass', 3)
+INSERT [dbo].[User] ([UserID], [UserLogin], [UserPassword], [UserRoleID]) VALUES (4, N'Booker', N'pass', 4)
+INSERT [dbo].[User] ([UserID], [UserLogin], [UserPassword], [UserRoleID]) VALUES (5, N'Educ1145', N'pass', 5)
+INSERT [dbo].[User] ([UserID], [UserLogin], [UserPassword], [UserRoleID]) VALUES (6, N'Educ1154', N'pass', 5)
+INSERT [dbo].[User] ([UserID], [UserLogin], [UserPassword], [UserRoleID]) VALUES (7, N'Educ1415', N'pass', 5)
+INSERT [dbo].[User] ([UserID], [UserLogin], [UserPassword], [UserRoleID]) VALUES (8, N'Educ1451', N'pass', 5)
+INSERT [dbo].[User] ([UserID], [UserLogin], [UserPassword], [UserRoleID]) VALUES (9, N'Educ1514', N'pass', 5)
+INSERT [dbo].[User] ([UserID], [UserLogin], [UserPassword], [UserRoleID]) VALUES (10, N'ParIAS', N'pass', 6)
+INSERT [dbo].[User] ([UserID], [UserLogin], [UserPassword], [UserRoleID]) VALUES (11, N'ParPMA', N'pass', 6)
+INSERT [dbo].[User] ([UserID], [UserLogin], [UserPassword], [UserRoleID]) VALUES (12, N'ParSEV', N'pass', 6)
+INSERT [dbo].[User] ([UserID], [UserLogin], [UserPassword], [UserRoleID]) VALUES (13, N'ParSON', N'pass', 6)
+INSERT [dbo].[User] ([UserID], [UserLogin], [UserPassword], [UserRoleID]) VALUES (14, N'ParKND', N'pass', 6)
+INSERT [dbo].[User] ([UserID], [UserLogin], [UserPassword], [UserRoleID]) VALUES (15, N'ParSVS', N'pass', 6)
+INSERT [dbo].[User] ([UserID], [UserLogin], [UserPassword], [UserRoleID]) VALUES (16, N'ParFIP', N'pass', 6)
+INSERT [dbo].[User] ([UserID], [UserLogin], [UserPassword], [UserRoleID]) VALUES (17, N'ParNVS', N'pass', 6)
+INSERT [dbo].[User] ([UserID], [UserLogin], [UserPassword], [UserRoleID]) VALUES (18, N'ParMTU', N'pass', 6)
+INSERT [dbo].[User] ([UserID], [UserLogin], [UserPassword], [UserRoleID]) VALUES (19, N'ParOUA', N'pass', 6)
+SET IDENTITY_INSERT [dbo].[User] OFF
+GO
+ALTER TABLE [dbo].[Child]  WITH CHECK ADD  CONSTRAINT [FK_Child_Groups] FOREIGN KEY([ChildGroupID])
+REFERENCES [dbo].[Groups] ([GroupID])
+GO
+ALTER TABLE [dbo].[Child] CHECK CONSTRAINT [FK_Child_Groups]
+GO
+ALTER TABLE [dbo].[Child]  WITH CHECK ADD  CONSTRAINT [FK_Child_Parents] FOREIGN KEY([ChildParentID])
+REFERENCES [dbo].[Parents] ([ParentID])
+GO
+ALTER TABLE [dbo].[Child] CHECK CONSTRAINT [FK_Child_Parents]
+GO
+ALTER TABLE [dbo].[Educator]  WITH CHECK ADD  CONSTRAINT [FK_Educator_Employee] FOREIGN KEY([EducatorEmployeeID])
+REFERENCES [dbo].[Employee] ([EmployeeID])
+GO
+ALTER TABLE [dbo].[Educator] CHECK CONSTRAINT [FK_Educator_Employee]
+GO
+ALTER TABLE [dbo].[Educator]  WITH CHECK ADD  CONSTRAINT [FK_Educator_Groups] FOREIGN KEY([EducatorGroupID])
+REFERENCES [dbo].[Groups] ([GroupID])
+GO
+ALTER TABLE [dbo].[Educator] CHECK CONSTRAINT [FK_Educator_Groups]
+GO
+ALTER TABLE [dbo].[Employee]  WITH CHECK ADD  CONSTRAINT [FK_Employee_User] FOREIGN KEY([EmployeeUserID])
+REFERENCES [dbo].[User] ([UserID])
+GO
+ALTER TABLE [dbo].[Employee] CHECK CONSTRAINT [FK_Employee_User]
+GO
+ALTER TABLE [dbo].[Parents]  WITH CHECK ADD  CONSTRAINT [FK_Parents_User] FOREIGN KEY([ParentUserID])
+REFERENCES [dbo].[User] ([UserID])
+GO
+ALTER TABLE [dbo].[Parents] CHECK CONSTRAINT [FK_Parents_User]
+GO
+ALTER TABLE [dbo].[User]  WITH CHECK ADD  CONSTRAINT [FK_User_Role] FOREIGN KEY([UserRoleID])
+REFERENCES [dbo].[Role] ([RoleID])
+GO
+ALTER TABLE [dbo].[User] CHECK CONSTRAINT [FK_User_Role]
+GO
+USE [master]
+GO
+ALTER DATABASE [DB_DS_Nikonorova] SET  READ_WRITE 
+GO
